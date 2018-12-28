@@ -4,23 +4,23 @@ export default () => (
     <div className="page">
         <h1>Character</h1>
         <section className="info">
-            <form action="" id="character-form">
-                <div className="field">
-                    <input type="text" id="character-name" name="character-name"/>
-                    <label htmlFor="character-name">Name</label>
+            <form className="form" action="" id="character-form">
+                <div className="form__child field">
+                    <input className="field__input" type="text" id="character-name" name="character-name"/>
+                    <label className="field__label" htmlFor="character-name">Name</label>
                 </div>
-                <div className="field">
-                    <input type="text" id="character-race" name="character-race"/>
-                    <label htmlFor="character-race">Race</label>
+                <div className="form__child field">
+                    <input className="field__input" type="text" id="character-race" name="character-race"/>
+                    <label className="field__label" htmlFor="character-race">Race</label>
                 </div>
-                <div className="field-group">
+                <div className="form__child field-group">
                     <div className="field">
-                        <input type="text" id="character-level" name="character-level"/>
-                        <label htmlFor="character-level">Level</label>
+                        <input className="field__input" type="text" id="character-level" name="character-level"/>
+                        <label className="field__label" htmlFor="character-level">Level</label>
                     </div>
                     <div className="field">
-                        <input type="text" id="character-alignment" name="character-alignment"/>
-                        <label htmlFor="character-alignment">Alignment</label>
+                        <input className="field__input" type="text" id="character-alignment" name="character-alignment"/>
+                        <label className="field__label" htmlFor="character-alignment">Alignment</label>
                     </div>
                 </div>
             </form>
