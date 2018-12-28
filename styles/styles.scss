@@ -1,0 +1,9 @@
+@import './vars.scss';
+@import './resets.scss';
+
+.info {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $site-max-width;
+    border: 1px solid black;
+}
