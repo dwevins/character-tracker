@@ -1,0 +1,10 @@
+.footer {
+    padding: 2rem 3rem;
+    background-color: aliceblue;
+
+    &__content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: $site-max-width;
+    }
+}
