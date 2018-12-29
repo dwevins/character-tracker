@@ -4,24 +4,7 @@ input {
     text-align: center;
     background-color: inherit;
 
-    &:focus {
-        outline: none;
-    }
-}
-
-.field {
-    display: flex;
-    text-align: center;
-    width: 100%;
-    flex-wrap: wrap;
-
-    &__input {
-        width:100%;
-    }
-
-    &__label {
-        width: 100%;
-    }
+    &:focus { outline: none }
 }
 
 .form {
@@ -33,25 +16,36 @@ input {
         margin-bottom: 2rem;
         width: 100%;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+        &:last-child { margin-bottom: 0 }
     }
 }
 
+.field {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    &__input { width:100% }
+
+    &__label { width: 100% }
+}
+
 .field-group {
-    // split the children into 2 columns
-    // at 17rem wide, should be 1rem apart
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
 
-    & > .field {
-        width: 100%;
+    $margin: 7%;
+    $width-short: calc((100% - #{ $margin * 2 }) / 3);
+    $width-long: calc((#{ $width-short } * 2) + #{ $margin });
 
-        &:first-child {
-            margin-right: 5.88%;
-        }
+    > .field:not(:last-child) { margin-right: $margin }
+
+    &--alt {
+        > .field--long { width: $width-long }
+
+        > .field--short { width: $width-short }
     }
 }
