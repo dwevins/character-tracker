@@ -7,6 +7,7 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "aws-sdk": "^2.382.0",
+    "dotenv": "^6.2.0",
     "next": "^7.0.2",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
