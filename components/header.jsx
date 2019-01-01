@@ -4,6 +4,9 @@ export default () => (
     <header className="header">
         <div className="header__content main-menu">
             <Link prefetch href='/'>
+                <a className="main-menu__item">Log In</a>
+            </Link>
+            <Link prefetch href='/character'>
                 <a className="main-menu__item">Character</a>
             </Link>
             <Link prefetch href='/combat'>
