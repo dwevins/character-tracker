@@ -1,11 +1,25 @@
-import Page from '../layouts/main';
+/**
+ * Combat Page
+ *
+ * This component defines the Combat page.
+ *
+ * Only viewable when an authorized user is logged in.
+ */
 
-export default () => (
-    <Page>
-        <div className="page page--combat">
-            <section className="info">
-                <h1>Combat</h1>
-            </section>
-        </div>
-    </Page>
-)
+import ProtectedPage from '../layouts/ProtectedPage';
+
+export default class CombatPage extends ProtectedPage {
+    constructor(props) {
+        super(props);
+    }
+
+    /**
+     * TODO:
+     * Add combat fields.
+     */
+    renderPageContent() {
+        return (
+            <h1>Combat</h1>
+        )
+    }
+}
