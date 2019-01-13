@@ -2,7 +2,9 @@
   "scripts": {
     "dev": "NODE_ENV=development node index.js",
     "build": "next build",
-    "start": "next build && next start"
+    "postinstall": "npm run build",
+    "start": "next start",
+    "heroku-logs": "heroku logs --app=dnd-character-tracker --tail"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
