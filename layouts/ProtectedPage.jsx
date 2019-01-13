@@ -17,12 +17,26 @@
 
 import { Component } from 'react';
 import Page from './Page';
+import Amplify, { Auth } from 'aws-amplify';
+import getConfig from 'next/config'
 
 export default class ProtectedPage extends Component {
     // Get session from NextAuth to determine whether user is logged in
 
     constructor(props) {
         super(props);
+
+        const env = getConfig().publicRuntimeConfig;
+        const cognitoConfig = {
+            Auth: {
+                identityPoolId: env.COGNITO_IDENTITY_POOL_ID,
+                region: env.COGNITO_REGION,
+                userPoolId: env.COGNITO_USER_POOL_ID,
+                userPoolWebClientId: env.COGNITO_CLIENT_ID
+            }
+        }
+
+        Amplify.configure(cognitoConfig);
     }
 
     // Provide overridable function to allow pages to specify their content
