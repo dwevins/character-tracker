@@ -7,6 +7,7 @@
 import { NextAuth } from 'next-auth/client'
 import { Component } from 'react';
 import Page from '../layouts/Page';
+import { CognitoUserPool, AuthenticationDetails, CognitoUser } from 'amazon-cognito-identity-js';
 
 export default class LoginPage extends Component {
     /**
