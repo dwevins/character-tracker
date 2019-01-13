@@ -9,6 +9,9 @@ export default () => (
             <Link prefetch href='/combat'>
                 <a className="main-menu__item">Combat</a>
             </Link>
+            <Link prefetch href='/scores'>
+                <a className="main-menu__item">Scores</a>
+            </Link>
         </div>
     </header>
 )
