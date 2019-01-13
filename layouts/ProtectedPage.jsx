@@ -15,17 +15,11 @@
  * Page component.
  */
 
-import { NextAuth } from 'next-auth/client'
 import { Component } from 'react';
 import Page from './Page';
 
 export default class ProtectedPage extends Component {
     // Get session from NextAuth to determine whether user is logged in
-    static async getInitialProps({req}) {
-        return {
-            session: await NextAuth.init({req})
-        }
-    }
 
     constructor(props) {
         super(props);
@@ -58,7 +52,7 @@ export default class ProtectedPage extends Component {
     render() {
         // If user is logged in, render page content.
         // Else, render login prompt
-        if (this.props.session.user) {
+        if (this.props.session) {
             return this.renderProtectedPage()
         } else {
             return this.renderBlockedPage()
