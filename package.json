@@ -2,8 +2,8 @@
   "scripts": {
     "dev": "NODE_ENV=development node index.js",
     "build": "next build",
-    "postinstall": "npm run build",
-    "start": "next start",
+    "heroku-postinstall": "npm run build",
+    "start": "next start -p $PORT",
     "heroku-logs": "heroku logs --app=dnd-character-tracker --tail"
   },
   "dependencies": {
