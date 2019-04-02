@@ -12,6 +12,9 @@ export default () => (
             <Link prefetch href='/combat'>
                 <a className="main-menu__item">Combat</a>
             </Link>
+            <Link prefetch href='/register'>
+                <a className="main-menu__item">Register</a>
+            </Link>
         </div>
     </header>
 )
