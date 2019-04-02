@@ -9,8 +9,8 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "aws-amplify": "^1.1.19",
-    "aws-amplify-react": "^2.3.0",
     "dotenv": "^6.2.0",
+    "formik": "^1.5.1",
     "next": "^7.0.2",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
