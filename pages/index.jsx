@@ -5,6 +5,8 @@
  */
 
 import { Component } from 'react';
+import { Formik, Form, Field } from 'formik';
+import { Auth } from 'aws-amplify'
 import Page from '../layouts/Page';
 
 export default class LoginPage extends Component {
@@ -17,10 +19,15 @@ export default class LoginPage extends Component {
         super(props);
     }
 
-    login(e) {
-        e.preventDefault();
-        console.log('login attempt', e);
-
+    login(values, actions) {
+        console.log('login attempt', typeof values.email);
+        Auth.signIn({
+            username: values.email,
+            password: values.password
+        })
+        .then(user => console.log(user))
+        .catch(err => console.log(err, Auth.configure()))
+        
     }
 
     /**
@@ -31,20 +38,26 @@ export default class LoginPage extends Component {
         return (
             <Page>
                 <h1>login page</h1>
-                <form onSubmit={ (e) => this.login(e) }>
-                    <div className="field-group field-group--alt form__child">
-                        <div className="field field--long">
-                            <input className="field__input" type="text" id="username" name="username"/>
-                            <label className="field__label" htmlFor="username">Username</label>
-                        </div>
-                        <div className="field field--short">
-                            <input className="field__input" type="password" id="password" name="password"/>
-                            <label className="field__label" htmlFor="password">Password</label>
-                        </div>
-                    </div>
+                <Formik
+                    initialValues={{ email: '', password: '' }}
+                    onSubmit={ (values, actions) => this.login(values, actions) }
+                    render={ ({
+                        handleSubmit
+                    }) => (
+                        <Form onSubmit={ handleSubmit }>
+                            <div className="field">
+                                <Field type="email" name="email" placeholder="Email" />
+                            </div>
+                            <div className="field">
+                                <Field type="password" name="password" placeholder="Passsword" />
+                            </div>
+                             
+                            <button type="submit">Submit</button>
+                        </Form>
+                    ) }
+                >
 
-                    <button type="submit">submit</button>
-                </form>
+                </Formik>
             </Page>
         )
     }
