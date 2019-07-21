@@ -1,14 +1,33 @@
-import Link from 'next/link';
+import Link from 'next/link'
+import styled from 'styled-components'
 
-export default () => (
-    <header className="header">
-        <div className="header__content main-menu">
+const Wrapper = styled.header`
+    padding: 2rem 3rem;
+    background-color: aliceblue;
+`
+
+const Menu = styled.div`
+    margin: 0 auto;
+    width: 100%;
+    max-width: $site-max-width;
+    display: flex;
+`
+
+const Anchor = styled.a`
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+`
+
+export const Header = () => (
+    <Wrapper>
+        <Menu>
             <Link prefetch href='/'>
-                <a className="main-menu__item">Character</a>
+                <Anchor>Character</Anchor>
             </Link>
             <Link prefetch href='/combat'>
-                <a className="main-menu__item">Combat</a>
+                <Anchor>Combat</Anchor>
             </Link>
-        </div>
-    </header>
+        </Menu>
+    </Wrapper>
 )
