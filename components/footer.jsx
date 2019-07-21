@@ -7,6 +7,7 @@ const Wrapper = styled.footer`
 
 const Content = styled.div`
     margin: 0 auto;
+    max-width: ${p => p.theme.sizes.siteMaxWidth};
     width: 100%;
 `;
 
