@@ -1,9 +1,17 @@
+import styled from 'styled-components'
 import { Field } from '../'
 
+const Wrapper = styled.div`
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+`
+
 export const FieldGroup = ({ altLayout, fields }) => (
-  <div className="field-group field-group--alt form__child">
+  <Wrapper>
     {fields.map((field, key) => (
       <Field key={key} {...field} />
     ))}
-  </div>
+  </Wrapper>
 )
