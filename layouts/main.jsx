@@ -1,7 +1,4 @@
-import Head from '../components/head';
-import Header from '../components/header';
-import Footer from '../components/footer';
-
+import { Footer, Head, Header } from '../components';
 import { Fragment } from 'react';
 
 
