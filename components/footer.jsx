@@ -10,7 +10,7 @@ const Content = styled.div`
     width: 100%;
 `;
 
-export default () => (
+export const Footer = () => (
     <Wrapper>
         <Content>
             <span>Thanks for using the character tracker!</span>
