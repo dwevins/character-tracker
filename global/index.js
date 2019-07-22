@@ -1,1 +1,2 @@
-export { Theme } from './theme'
+export { Theme } from './Theme'
+export { Resets } from './Resets'
