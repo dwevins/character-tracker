@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
 `
 
-export const FieldGroup = ({ altLayout, fields }) => (
+export const FieldGroup = ({ fields }) => (
   <Wrapper>
     {fields.map((field, key) => (
       <Field key={key} {...field} />

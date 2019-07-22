@@ -1,36 +1,37 @@
 export const FieldGroups = [
   {
-    altLayout: true,
     fields: [
       {
         id: 'character-name',
         label: 'Name',
+        width: 'long',
         type: 'text'
       },
       {
         id: 'character-level',
         label: 'Level',
+        width: 'short',
         type: 'text'
       }
     ]
   },
   {
-    altLayout: true,
     fields: [
       {
         id: 'character-race',
         label: 'Race',
+        width: 'long',
         type: 'text'
       },
       {
         id: 'character-alignment',
         label: 'Alignment',
+        width: 'short',
         type: 'text'
       }
     ]
   },
   {
-    altLayout: false,
     fields: [
       {
         id: 'character-class',
@@ -45,7 +46,6 @@ export const FieldGroups = [
     ]
   },
   {
-    altLayout: false,
     fields: [
       {
         id: 'character-height',
@@ -65,7 +65,6 @@ export const FieldGroups = [
     ]
   },
   {
-    altLayout: false,
     fields: [
       {
         id: 'character-hair',
